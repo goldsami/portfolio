@@ -12,6 +12,7 @@ const Home: NextPage = () => {
     <>
       <h1>Max Zolotarenko </h1><br/>
       <a style={divStyle} href={'https://github.com/goldsami/'}>My github</a>
+			<button class="button">Bulma button</button>
     </>
   )
 }
