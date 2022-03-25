@@ -1,4 +1,9 @@
+import Link from 'next/link'
+import {useState} from "react";
+
 export default function Navbar() {
+  const [showDropdown, toggleDropdown] = useState(false)
+
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -6,22 +11,28 @@ export default function Navbar() {
           <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
         </a>
 
-        <a role="button" className="navbar-burger is-active" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" onClick={() => toggleDropdown(!showDropdown)}
+           className={`navbar-burger ${showDropdown && 'is-active'}`}
+           aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div id="navbarBasicExample" className="navbar-menu">
+      <div id="navbarBasicExample" className={`navbar-menu ${showDropdown && 'is-active'}`}>
         <div className="navbar-start">
-          <a className="navbar-item">
-            Home
-          </a>
+          <Link href="/">
+            <a className="navbar-item">
+              Home
+            </a>
+          </Link>
 
-          <a className="navbar-item">
-            Documentation
-          </a>
+          <Link href="/projects">
+            <a className="navbar-item">
+              Projects
+            </a>
+          </Link>
         </div>
       </div>
     </nav>

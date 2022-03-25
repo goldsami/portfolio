@@ -11,7 +11,7 @@ const Home: NextPage = () => {
 
   return (
     <Layout>
-      <h1>Max Zolotarenko </h1><br/>
+      <h1>Main page </h1><br/>
       <a style={divStyle} href={'https://github.com/goldsami/'}>My github</a>
 			<button className="button">Bulma button</button>
     </Layout>
