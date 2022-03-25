@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
   const divStyle = {
@@ -12,7 +12,7 @@ const Home: NextPage = () => {
     <>
       <h1>Max Zolotarenko </h1><br/>
       <a style={divStyle} href={'https://github.com/goldsami/'}>My github</a>
-			<button class="button">Bulma button</button>
+			<button className="button">Bulma button</button>
     </>
   )
 }
