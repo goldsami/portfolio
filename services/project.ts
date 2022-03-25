@@ -1,4 +1,4 @@
-import data from '../static/data.json'
+import data from '../public/data.json'
 import {ProjectModel} from "../types";
 
 export class ProjectService {
