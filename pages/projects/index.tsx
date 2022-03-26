@@ -1,7 +1,7 @@
 import Layout from "../../components/layout"
 import {ProjectModel} from "../../types"
 import Link from 'next/link'
-import {ProjectService} from "../../services";
+import {DataService} from "../../services";
 
 interface ProjectsProps {
   projects: ProjectModel[]
@@ -22,7 +22,7 @@ export default function Projects({projects}: ProjectsProps) {
 }
 
 export async function getStaticProps() {
-  const projects = ProjectService.projects()
+  const projects = DataService.projects()
 
   return {
     props: {

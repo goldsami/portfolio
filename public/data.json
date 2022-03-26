@@ -1,5 +1,7 @@
 {
   "name": "Max Zolotarenko",
+  "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non luctus tortor, sed semper orci. Sed neque velit, consequat at justo nec, hendrerit imperdiet turpis. Vivamus odio est, aliquet vel ornare sit amet, gravida at erat. Duis consequat augue ligula, ac tincidunt nisi maximus non. Vestibulum sodales non diam at euismod. Praesent dictum, nisi eu viverra convallis, nibh augue tristique risus, eu imperdiet nunc erat tristique odio. Fusce pretium est a ligula lobortis mollis. Aenean laoreet nulla sit amet velit placerat, id ultricies lacus dignissim. Cras suscipit vitae nisl et aliquet. Cras ultrices nec lectus vel semper. Sed rhoncus elit eu ipsum aliquam tempus. Cras ac lobortis sem. Suspendisse ut efficitur urna. Nulla interdum fermentum odio nec pretium.",
+  "position": "Full Stack Developer",
   "projects": [
     {
       "id": "1",
@@ -8,6 +10,27 @@
     {
       "id": "2",
       "name": "proj 1"
+    }
+  ],
+  "contacts": {
+    "telegram": "@goldsamuel",
+    "phone": "+38 095 121 57 70",
+    "linkedin": "https://www.linkedin.com/in/max-zolotarenko-82aa551b3/"
+  },
+  "experience": [
+    {
+      "startDate": "2019-10-01",
+      "endDate": "2021-03-01",
+      "companyName": "Devmiles",
+      "position": "Full Stack Developer",
+      "techStack": [
+        "AngularJS",
+        "Angular",
+        "JS",
+        "TS",
+        "C#",
+        ".NET"
+      ]
     }
   ]
 }

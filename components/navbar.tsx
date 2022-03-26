@@ -1,15 +1,21 @@
 import Link from 'next/link'
 import {useState} from "react";
+import {DataService} from "../services";
 
 export default function Navbar() {
   const [showDropdown, toggleDropdown] = useState(false)
 
+  const {name, position} = DataService.me()
+
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
-      <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
-          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-        </a>
+      <div className="navbar-brand mr-6">
+        <Link href="/">
+          <a className="navbar-item is-flex is-flex-direction-column">
+            <div className="is-size-4 has-text-weight-semibold">{name}</div>
+            <div className="is-size-7">{position}</div>
+          </a>
+        </Link>
 
         <a role="button" onClick={() => toggleDropdown(!showDropdown)}
            className={`navbar-burger ${showDropdown && 'is-active'}`}
@@ -22,15 +28,21 @@ export default function Navbar() {
 
       <div id="navbarBasicExample" className={`navbar-menu ${showDropdown && 'is-active'}`}>
         <div className="navbar-start">
-          <Link href="/">
-            <a className="navbar-item">
-              Home
-            </a>
-          </Link>
-
           <Link href="/projects">
             <a className="navbar-item">
               Projects
+            </a>
+          </Link>
+
+          <Link href="/experience">
+            <a className="navbar-item">
+              Experience
+            </a>
+          </Link>
+
+          <Link href="/contacts">
+            <a className="navbar-item">
+              Contacts
             </a>
           </Link>
         </div>
