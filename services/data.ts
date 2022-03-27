@@ -1,5 +1,6 @@
 import data from '../public/data.json'
 import {ContactsModel, ExperiencePositionModel, ProjectModel, UserModel} from "../types";
+import {SkillsModel} from "../types/SkillsModel";
 
 export class DataService {
   static projects(): ProjectModel[] {
@@ -24,5 +25,9 @@ export class DataService {
 
   static experience(): ExperiencePositionModel[] {
     return data?.experience
+  }
+
+  static skills(): SkillsModel {
+    return data?.skills
   }
 }

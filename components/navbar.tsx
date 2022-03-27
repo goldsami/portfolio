@@ -36,7 +36,7 @@ export default function Navbar() {
 
           <Link href="/experience">
             <a className="navbar-item">
-              Experience
+              Skills & Experience
             </a>
           </Link>
 
