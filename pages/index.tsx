@@ -2,8 +2,6 @@ import Layout from "../components/layout"
 import {DataService} from "../services";
 import {UserModel} from "../types";
 import Image from 'next/image';
-import jsLogo from '/public/images/javascript.png';
-import meImage from '/public/images/me.webp';
 
 interface HomeProps {
   aboutMyself: UserModel
@@ -17,7 +15,7 @@ export default function Home({aboutMyself: {about, name}}: HomeProps) {
           <div className="column is-one-third">
             <h3 className="title is-3 has-text-centered">{name}</h3>
             <div className="block image has-text-centered">
-              <Image className="is-rounded" src={meImage} height={150} width={150}>
+              <Image className="is-rounded" src={'/images/me.webp'} height={150} width={150}>
               </Image>
             </div>
             <div className="box">
@@ -40,7 +38,7 @@ export default function Home({aboutMyself: {about, name}}: HomeProps) {
             <div>
               <div className="title is-5">Skills</div>
               <div>
-                <Image alt="JS logo" src={jsLogo} height={60} width={60}></Image>
+                <Image alt="JS logo" src={'/images/javascript.png'} height={60} width={60}></Image>
                 {/*<img src="/public/favicon.ico" />*/}
               </div>
             </div>
