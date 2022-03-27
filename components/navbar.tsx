@@ -28,15 +28,15 @@ export default function Navbar() {
 
       <div id="navbarBasicExample" className={`navbar-menu ${showDropdown && 'is-active'}`}>
         <div className="navbar-start">
-          <Link href="/projects">
-            <a className="navbar-item">
-              Projects
-            </a>
-          </Link>
-
           <Link href="/experience">
             <a className="navbar-item">
               Skills & Experience
+            </a>
+          </Link>
+
+          <Link href="/projects">
+            <a className="navbar-item">
+              Projects
             </a>
           </Link>
         </div>
@@ -58,7 +58,7 @@ export default function Navbar() {
               <i className="fa fa-lg fa-telegram"></i>
             </span>
           </div>
-          <div className="navbar-item ml-2" style={{marginLeft: 'auto'}}>
+          <div className="navbar-item" style={{marginLeft: 'auto'}}>
             <span className="icon is-medium is-clickable">
               <i className="fa fa-lg fa-moon-o" style={{color: 'orange'}}></i>
             </span>

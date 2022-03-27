@@ -2,6 +2,8 @@ import Layout from "../components/layout"
 import {DataService} from "../services";
 import {UserModel} from "../types";
 import Image from 'next/image';
+import jsLogo from '/public/images/javascript.png';
+import meImage from '/public/images/me.webp';
 
 interface HomeProps {
   aboutMyself: UserModel
@@ -11,9 +13,13 @@ export default function Home({aboutMyself: {about, name}}: HomeProps) {
   return (
     <Layout>
       <div className="block">
-        <h3 className="title is-3">{name}</h3>
-        <div className="columns">
+        <div className="columns is-variable is-6">
           <div className="column is-one-third">
+            <h3 className="title is-3 has-text-centered">{name}</h3>
+            <div className="block image has-text-centered">
+              <Image className="is-rounded" src={meImage} height={150} width={150}>
+              </Image>
+            </div>
             <div className="box">
               <div className="title is-5">Job Opportunities</div>
                 <span>
@@ -28,14 +34,13 @@ export default function Home({aboutMyself: {about, name}}: HomeProps) {
             </div>
           </div>
           <div className="column is-two-thirds">
-            <article className="has-text-justified block">{about}
+            <article style={{marginTop: '60px'}} className="has-text-justified block">{about}
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit finibus odio mattis luctus. Vivamus et pharetra nisi. Curabitur sit amet nibh dolor. Vivamus cursus mi non diam commodo semper. In imperdiet at purus at ultrices. Mauris id ornare mi. Maecenas sit amet dictum lectus. Ut volutpat turpis a magna tincidunt, eget molestie dolor porta. Donec sit amet mauris maximus, porttitor ex ac, pellentesque massa. Etiam sit amet lacus eu quam pretium laoreet laoreet nec turpis. Sed vitae viverra nisi.
             </article>
             <div>
               <div className="title is-5">Skills</div>
               <div>
-                {/*<Image alt="React logo" src="/public/images/react.png" height={60} width={60}></Image>*/}
-                {/*<img src="/public/images/react.png" />*/}
+                <Image alt="JS logo" src={jsLogo} height={60} width={60}></Image>
                 {/*<img src="/public/favicon.ico" />*/}
               </div>
             </div>
