@@ -24,10 +24,14 @@ export class DataService {
   }
 
   static experience(): ExperiencePositionModel[] {
-    return data?.experience
+    // @ts-ignore
+    return data?.experience.sort((a,b) => new Date(b.startDate) - new Date(a.startDate))
   }
 
   static skills(): SkillsModel {
-    return data?.skills
+    return {
+      languages: data?.skills.languages.sort((a,b) => b.rate - a.rate),
+      frameworks: data?.skills.frameworks.sort((a,b) => b.rate - a.rate),
+    }
   }
 }

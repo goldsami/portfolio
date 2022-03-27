@@ -6,7 +6,35 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: $light;
+}
+
+.navbar {
+  box-shadow: 0 0 8px -6px;
+}
+
+.experience-block {
+  .box {
+    position: relative;
+
+    &:after {
+      $line-height: 3rem;
+
+      content: "";
+      position: absolute;
+      left: calc(50% - 1px);
+      bottom: -$line-height;
+      height: $line-height;
+      border-left: 2px solid $grey-light;
+    }
+  }
+
+  &:last-child {
+    .box:after {
+      content: none;
+    }
+  }
 }
 
 a {

@@ -8,8 +8,8 @@ export default function Navbar() {
   const {name, position} = DataService.me()
 
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
-      <div className="navbar-brand mr-6">
+    <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <div className="navbar-brand">
         <Link href="/">
           <a className="navbar-item is-flex is-flex-direction-column">
             <div className="is-size-4 has-text-weight-semibold">{name}</div>

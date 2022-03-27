@@ -29,7 +29,8 @@
         "JS",
         "TS",
         "C#",
-        ".NET"
+        ".NET",
+        "SQL"
       ]
     },
     {
@@ -44,6 +45,18 @@
         "Graphql",
         "React",
         "Pug"
+      ]
+    },
+    {
+      "startDate": "2016-09-01",
+      "endDate": "2020-12-01",
+      "companyName": "Igor Sikorsky Kyiv Polytechnic Institute",
+      "position": "Student",
+      "techStack": [
+        "C#",
+        "C++",
+        "C",
+        "JS"
       ]
     }
   ],
@@ -76,6 +89,10 @@
       {
         "technologyName": "Elixir",
         "rate": 1
+      },
+      {
+        "technologyName": "SQL",
+        "rate": 3
       }
     ],
     "frameworks": [
