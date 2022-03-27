@@ -1,30 +1,47 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
 import Layout from "../components/layout"
 import {DataService} from "../services";
 import {UserModel} from "../types";
+import Image from 'next/image';
 
 interface HomeProps {
   aboutMyself: UserModel
 }
 
-export default function Home({aboutMyself: {about}}: HomeProps) {
-  const divStyle = {
-      color: 'blue',
-  };
-
+export default function Home({aboutMyself: {about, name}}: HomeProps) {
   return (
     <Layout>
-      <h1>Main page </h1><br/>
-      <a style={divStyle} href={'https://github.com/goldsami/'}>My github</a>
-      <br/>
-      {about}<br/>
-      <span className="is-family-sans-serif">Hello</span><br/>
-      <span className="is-family-monospace">Hello</span><br/>
-      <span className="is-family-primary">Hello</span><br/>
-      <span className="is-family-secondary">Hello</span><br/>
-      <span className="is-family-code">Hello</span><br/>
+      <div className="block">
+        <h3 className="title is-3">{name}</h3>
+        <div className="columns">
+          <div className="column is-one-third">
+            <div className="box">
+              <div className="title is-5">Job Opportunities</div>
+                <span>
+                  Now i'm looking for job on front-end developer position.
+                    Here's my <a href="/public/resume.txt" download>CV</a>.
+                </span>
+            </div>
+            <div className="box">
+              <div className="title is-5">Links</div>
+                <div className="mb-2 is-family-code"><a>LinkedIn</a></div>
+                <div className="mb-2 is-family-code"><a>Telegram</a></div>
+            </div>
+          </div>
+          <div className="column is-two-thirds">
+            <article className="has-text-justified block">{about}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit finibus odio mattis luctus. Vivamus et pharetra nisi. Curabitur sit amet nibh dolor. Vivamus cursus mi non diam commodo semper. In imperdiet at purus at ultrices. Mauris id ornare mi. Maecenas sit amet dictum lectus. Ut volutpat turpis a magna tincidunt, eget molestie dolor porta. Donec sit amet mauris maximus, porttitor ex ac, pellentesque massa. Etiam sit amet lacus eu quam pretium laoreet laoreet nec turpis. Sed vitae viverra nisi.
+            </article>
+            <div>
+              <div className="title is-5">Skills</div>
+              <div>
+                {/*<Image alt="React logo" src="/public/images/react.png" height={60} width={60}></Image>*/}
+                {/*<img src="/public/images/react.png" />*/}
+                {/*<img src="/public/favicon.ico" />*/}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }

@@ -39,12 +39,30 @@ export default function Navbar() {
               Skills & Experience
             </a>
           </Link>
+        </div>
 
-          <Link href="/contacts">
-            <a className="navbar-item">
-              Contacts
-            </a>
-          </Link>
+
+        <div className="navbar-end is-flex">
+          <div className="navbar-item">
+            <span className="icon is-medium is-clickable">
+              <i className="fa fa-lg fa-github"></i>
+            </span>
+          </div>
+          <div className="navbar-item">
+            <span className="icon is-medium is-clickable">
+              <i className="fa fa-lg fa-linkedin"></i>
+            </span>
+          </div>
+          <div className="navbar-item">
+            <span className="icon is-medium is-clickable">
+              <i className="fa fa-lg fa-telegram"></i>
+            </span>
+          </div>
+          <div className="navbar-item ml-2" style={{marginLeft: 'auto'}}>
+            <span className="icon is-medium is-clickable">
+              <i className="fa fa-lg fa-moon-o" style={{color: 'orange'}}></i>
+            </span>
+          </div>
         </div>
       </div>
     </nav>
