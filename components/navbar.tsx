@@ -1,11 +1,14 @@
 import Link from 'next/link'
 import {useState} from "react";
 import {DataService} from "../services";
+import {useTheme} from "next-themes";
 
 export default function Navbar() {
   const [showDropdown, toggleDropdown] = useState(false)
 
   const {name, position} = DataService.me()
+
+  const {theme, setTheme} = useTheme()
 
   return (
     <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
@@ -60,7 +63,8 @@ export default function Navbar() {
           </div>
           {/*todo: add margin on desktop*/}
           <div className="navbar-item" style={{marginLeft: 'auto'}}>
-            <span className="icon is-medium is-clickable">
+            <span className="icon is-medium is-clickable"
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
               <i className="fa fa-lg fa-moon-o" style={{color: 'orange'}}></i>
             </span>
           </div>

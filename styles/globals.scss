@@ -14,7 +14,10 @@ body {
 }
 
 html {
-  //padding-top: $nav-height;
+  &.dark {
+    $light: black;
+    background-color: black;
+  }
 }
 
 .main-container {
