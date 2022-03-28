@@ -5,11 +5,59 @@
   "projects": [
     {
       "id": "1",
-      "name": "proj 1"
+      "name": "Kanban board",
+      "github": "https://github.com/goldsami/kanban-board",
+      "url": "https://goldsami-kanban-board.netlify.app",
+      "description": "Tool for tasks and projects management.",
+      "pictures": [],
+      "techStack": [
+        "GraphQL",
+        "Vue",
+        "Express",
+        "TS",
+        "Clean Architecture",
+        "Firebase"
+      ]
     },
     {
       "id": "2",
-      "name": "proj 1"
+      "name": "Snake game",
+      "github": "https://github.com/goldsami/snake",
+      "url": "https://snake-bice.vercel.app",
+      "pictures": [],
+      "techStack": [
+        "Vue"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Portfolio",
+      "github": "https://github.com/goldsami/portfolio",
+      "url": "https://portfolio-goldsami.vercel.app/",
+      "description": "My portfolio web site",
+      "pictures": [],
+      "techStack": [
+        "NextJS"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Conway's Game of Life",
+      "github": "https://github.com/goldsami/game-of-life",
+      "pictures": [],
+      "techStack": [
+        "Go"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Reddit Client",
+      "github": "https://github.com/goldsami/RedditClientRepository",
+      "pictures": [],
+      "techStack": [
+        "Ionic",
+        "Angular"
+      ]
     }
   ],
   "contacts": {

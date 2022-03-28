@@ -36,7 +36,7 @@ export default function Home({aboutMyself: {about, name}}: HomeProps) {
               <div className="title is-5">Job Opportunities</div>
               <article className="block">
                 Now i'm looking for job on front-end developer position.<br/>
-                Here's my <a href="/public/resume.txt" download>CV</a>.
+                Here's my <a href="/resume.txt" download>CV</a>.
               </article>
             </div>
             <div className="block">

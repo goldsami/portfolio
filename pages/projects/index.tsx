@@ -2,6 +2,7 @@ import Layout from "../../components/layout"
 import {ProjectModel} from "../../types"
 import Link from 'next/link'
 import {DataService} from "../../services";
+import Image from 'next/image'
 
 interface ProjectsProps {
   projects: ProjectModel[]
@@ -10,13 +11,26 @@ interface ProjectsProps {
 export default function Projects({projects}: ProjectsProps) {
   return (
     <Layout>
-      <ul>
+      <div className="columns is-multiline">
         {projects.map(p => (
-          <li key={p.id}><Link href={`/projects/${p.id}`}>
-            <a>{p.name}</a>
-          </Link></li>
+          <div key={p.id} className="project-container column is-one-third-desktop is-half-tablet">
+            <Link href={`/projects/${p.id}`}>
+              <div className="card">
+                <div className="card-image">
+                  <figure className="image is-5by3">
+                      <Image src={'/images/test.jpeg'}
+                             layout='fill'
+                             objectFit='cover'></Image>
+                  </figure>
+                  <div className="title is-4 px-3 py-1 mb-3 card-title has-text-light">
+                    {p.name}
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
         ))}
-      </ul>
+      </div>
     </Layout>
   )
 }
