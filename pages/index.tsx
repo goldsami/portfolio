@@ -44,6 +44,7 @@ export default function Home({aboutMyself: {about, name}}: HomeProps) {
               <div>
                 <Image alt="JS logo" src={'/images/javascript.png'} height={60} width={60}></Image>
               </div>
+              <div className="mb-2 is-family-code has-text-right"><a>More on skills</a></div>
             </div>
           </div>
         </div>
