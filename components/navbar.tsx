@@ -13,7 +13,7 @@ export default function Navbar() {
         <Link href="/">
           <a className="navbar-item is-flex is-flex-direction-column">
             <div className="is-size-4 has-text-weight-semibold">{name}</div>
-            <div className="is-size-7">{position}</div>
+            {/*<div className="is-size-7">{position}</div>*/}
           </a>
         </Link>
 
@@ -58,6 +58,7 @@ export default function Navbar() {
               <i className="fa fa-lg fa-telegram"></i>
             </span>
           </div>
+          {/*todo: add margin on desktop*/}
           <div className="navbar-item" style={{marginLeft: 'auto'}}>
             <span className="icon is-medium is-clickable">
               <i className="fa fa-lg fa-moon-o" style={{color: 'orange'}}></i>

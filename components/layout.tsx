@@ -10,7 +10,7 @@ export default function Layout({children}: any) {
           <div className="content columns is-mobile">
             <div className="column is-half">
               {/*todo: get from data.json*/}
-              Developed by <b>Max Zolotarenko</b>
+              Developed by <b style={{whiteSpace: 'nowrap'}}>Max Zolotarenko</b>
             </div>
             <div className="column is-half has-text-right">
               <span className="icon is-medium is-clickable">

@@ -19,27 +19,30 @@ export default function Home({aboutMyself: {about, name}}: HomeProps) {
               </Image>
             </div>
             <div className="box">
-              <div className="title is-5">Job Opportunities</div>
-                <span>
-                  Now i'm looking for job on front-end developer position.
-                    Here's my <a href="/public/resume.txt" download>CV</a>.
-                </span>
-            </div>
-            <div className="box">
               <div className="title is-5">Links</div>
                 <div className="mb-2 is-family-code"><a>LinkedIn</a></div>
                 <div className="mb-2 is-family-code"><a>Telegram</a></div>
+                <div className="mb-2 is-family-code"><a>Email</a></div>
+                <div className="mb-2 is-family-code"><a>Djinni</a></div>
+                <div className="mb-2 is-family-code"><a>Github</a></div>
             </div>
           </div>
           <div className="column is-two-thirds">
-            <article style={{marginTop: '60px'}} className="has-text-justified block">{about}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit finibus odio mattis luctus. Vivamus et pharetra nisi. Curabitur sit amet nibh dolor. Vivamus cursus mi non diam commodo semper. In imperdiet at purus at ultrices. Mauris id ornare mi. Maecenas sit amet dictum lectus. Ut volutpat turpis a magna tincidunt, eget molestie dolor porta. Donec sit amet mauris maximus, porttitor ex ac, pellentesque massa. Etiam sit amet lacus eu quam pretium laoreet laoreet nec turpis. Sed vitae viverra nisi.
+            {/*todo: remove margin on mobile*/}
+            <article style={{marginTop: '60px'}} className="has-text-justified block">
+              {about}
             </article>
-            <div>
+            <div className="block">
+              <div className="title is-5">Job Opportunities</div>
+              <article className="block">
+                Now i'm looking for job on front-end developer position.<br/>
+                Here's my <a href="/public/resume.txt" download>CV</a>.
+              </article>
+            </div>
+            <div className="block">
               <div className="title is-5">Skills</div>
               <div>
                 <Image alt="JS logo" src={'/images/javascript.png'} height={60} width={60}></Image>
-                {/*<img src="/public/favicon.ico" />*/}
               </div>
             </div>
           </div>
