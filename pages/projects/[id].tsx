@@ -2,11 +2,28 @@ import Layout from "../../components/layout";
 import {useRouter} from "next/router";
 import {ProjectModel} from "../../types";
 import {DataService} from "../../services";
+import Image from "next/image";
 
-export default function Project({id, name}: ProjectModel) {
+export default function Project({id, name, pictures, github, url, techStack, description}: ProjectModel) {
   return (
     <Layout>
-      project: {name}
+      <div className="columns m-0">
+        <div className="column is-one-third">
+          <h3 className="title is-3">{name}</h3>
+          <div className="is-6 subtitle">{description}</div>
+          <div className="block">
+            <span className="has-text-weight-semibold">Tech stack: &nbsp;</span>
+            <span className="is-family-code">{techStack.join(', ')}</span>
+          </div>
+          <div className="box">
+            <div className="mb-2 is-family-code">
+              <a>Github</a>
+            </div>
+            <div className="mb-2 is-family-code"><a>Website</a></div>
+          </div>
+        </div>
+        <div className="column is-two-thirds"></div>
+      </div>
     </Layout>
   )
 }
