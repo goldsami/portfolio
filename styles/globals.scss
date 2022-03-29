@@ -15,8 +15,30 @@ body {
 
 html {
   &.dark {
-    $light: black;
-    background-color: black;
+    * {
+      color: whitesmoke !important;
+    }
+
+    body {
+      background-color: #232323;
+      background-color: #424242;
+    }
+
+    .navbar-item:hover {
+      background-color: #5a5a5a;
+    }
+
+    nav, footer {
+      background-color: #232323;
+    }
+
+    .box {
+      background-color: lightgray;
+
+      * {
+        color: black !important;
+      }
+    }
   }
 }
 
