@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "~bulma/bulma";
 @import "~font-awesome/css/font-awesome.min.css";
+@import "~react-responsive-carousel/lib/styles/carousel.min.css";
 
 $nav-height: 3.25rem;
 
@@ -32,6 +33,16 @@ html {
       background-color: #232323;
     }
 
+    .carousel {
+      .thumb {
+        border-color: transparent;
+
+        &.selected {
+          border-color: whitesmoke;
+        }
+      }
+    }
+
     .box {
       background-color: lightgray;
 
@@ -39,6 +50,16 @@ html {
         color: black !important;
       }
     }
+  }
+}
+
+.carousel {
+  .thumbs {
+    text-align: center;
+  }
+
+  .control-arrow {
+    padding: 1rem !important;
   }
 }
 
@@ -63,13 +84,15 @@ html {
   .card {
     overflow: hidden;
 
-    &-image {}
+    &-image {
+    }
+
     img {
       transition: all 1s;
     }
 
     &-title {
-      position:absolute;
+      position: absolute;
       bottom: 0px;
       width: 100%;
       backdrop-filter: brightness(50%);

@@ -3,6 +3,7 @@ import {useRouter} from "next/router";
 import {ProjectModel} from "../../types";
 import {DataService} from "../../services";
 import Image from "next/image";
+import {Carousel} from "react-responsive-carousel";
 
 export default function Project({id, name, pictures, github, url, techStack, description}: ProjectModel) {
   return (
@@ -22,7 +23,15 @@ export default function Project({id, name, pictures, github, url, techStack, des
             <div className="mb-2 is-family-code"><a>Website</a></div>
           </div>
         </div>
-        <div className="column is-two-thirds"></div>
+        <div className="column is-two-thirds">
+          <Carousel>
+            {pictures.map(p => (
+              <div>
+                <img src={p} />
+              </div>
+            ))}
+          </Carousel>
+        </div>
       </div>
     </Layout>
   )
