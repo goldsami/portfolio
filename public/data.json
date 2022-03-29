@@ -92,7 +92,8 @@
         "Express",
         "Graphql",
         "React",
-        "Pug"
+        "Pug",
+        "Cypress"
       ]
     },
     {
@@ -123,7 +124,15 @@
         "rate": 3
       },
       {
-        "technologyName": "HTML/CSS/SASS",
+        "technologyName": "HTML",
+        "rate": 5
+      },
+      {
+        "technologyName": "CSS",
+        "rate": 5
+      },
+      {
+        "technologyName": "SASS",
         "rate": 5
       },
       {
@@ -167,6 +176,10 @@
       {
         "technologyName": "NextJs",
         "rate": 3
+      },
+      {
+        "technologyName": "Cypress",
+        "rate": 2
       }
     ]
   }

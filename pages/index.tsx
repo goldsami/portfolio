@@ -1,13 +1,27 @@
 import Layout from "../components/layout"
-import {DataService} from "../services";
+import {DataService, getTechImage} from "../services";
 import {UserModel} from "../types";
 import Image from 'next/image';
+import {SkillsModel, SkillType} from "../types/SkillsModel";
+import {useMemo} from "react";
 
 interface HomeProps {
-  aboutMyself: UserModel
+  aboutMyself: UserModel,
+  skills: SkillsModel
 }
 
-export default function Home({aboutMyself: {about, name}}: HomeProps) {
+export default function Home({aboutMyself: {about, name}, skills: {languages, frameworks}}: HomeProps) {
+
+  const techIcons = useMemo(() => {
+    const process = (items: SkillType[]) => {
+      return items.filter(x => x.rate > 3).map(x => getTechImage(x.technologyName)).filter(x => !!x)
+    }
+    return [
+      ...process(languages),
+      ...process(frameworks)
+    ]
+  }, [languages, frameworks])
+
   return (
     <Layout>
       <div className="columns is-variable is-6">
@@ -39,9 +53,13 @@ export default function Home({aboutMyself: {about, name}}: HomeProps) {
             </article>
           </div>
           <div className="block">
-            <div className="title is-5">Skills</div>
-            <div>
-              <Image alt="JS logo" src={'/images/javascript.png'} height={60} width={60}></Image>
+            <div className="title is-5">Main Skills</div>
+            <div className="columns is-flex is-flex-wrap-wrap">
+              {techIcons.map(x => (
+                !!x && <div className="m-3">
+                  <Image src={x} height={60} width={60}></Image>
+                </div>
+              ))}
             </div>
             <div className="mb-2 is-family-code has-text-right"><a>More on skills</a></div>
           </div>
@@ -53,10 +71,12 @@ export default function Home({aboutMyself: {about, name}}: HomeProps) {
 
 export async function getStaticProps() {
   const aboutMyself = DataService.me()
+  const skills = DataService.skills()
 
   return {
     props: {
-      aboutMyself
+      aboutMyself,
+      skills
     }
   }
 }

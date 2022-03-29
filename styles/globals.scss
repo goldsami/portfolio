@@ -29,7 +29,7 @@ html {
       background-color: #5a5a5a;
     }
 
-    nav, footer {
+    nav, footer, .navbar-menu {
       background-color: #232323;
     }
 
@@ -141,4 +141,12 @@ html {
 
 * {
   box-sizing: border-box;
+}
+
+.theme-toggle {
+  margin-left: 0.75rem;
+
+  @include until($tablet) {
+    margin-left: auto;
+  }
 }

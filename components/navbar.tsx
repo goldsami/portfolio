@@ -62,10 +62,11 @@ export default function Navbar() {
             </span>
           </div>
           {/*todo: add margin on desktop*/}
-          <div className="navbar-item" style={{marginLeft: 'auto'}}>
+          <div className="navbar-item theme-toggle">
             <span className="icon is-medium is-clickable"
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-              <i className="fa fa-lg fa-moon-o" style={{color: 'orange'}}></i>
+              <i className={`fa fa-lg ${theme === 'dark' ? 'fa-sun-o' : 'fa-moon-o'}`}
+                 style={{color: 'orange'}}></i>
             </span>
           </div>
         </div>
