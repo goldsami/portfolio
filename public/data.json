@@ -9,7 +9,7 @@
       "github": "https://github.com/goldsami/kanban-board",
       "url": "https://goldsami-kanban-board.netlify.app",
       "description": "Tool for tasks and projects management.",
-      "pictures": [],
+      "pictures": ["/images/kanban-1.png","/images/kanban-2.png","/images/kanban-3.png"],
       "techStack": [
         "GraphQL",
         "Vue",
@@ -24,7 +24,7 @@
       "name": "Snake game",
       "github": "https://github.com/goldsami/snake",
       "url": "https://snake-bice.vercel.app",
-      "pictures": [],
+      "pictures": ["/images/snake-1.png", "/images/snake-2.png"],
       "techStack": [
         "Vue"
       ]
@@ -44,7 +44,7 @@
       "id": "4",
       "name": "Conway's Game of Life",
       "github": "https://github.com/goldsami/game-of-life",
-      "pictures": [],
+      "pictures": ["/images/game-of-life-1.png"],
       "techStack": [
         "Go"
       ]
@@ -53,7 +53,7 @@
       "id": "5",
       "name": "Reddit Client",
       "github": "https://github.com/goldsami/RedditClientRepository",
-      "pictures": [],
+      "pictures": ["/images/reddit-client-1.png","/images/reddit-client-2.png","/images/reddit-client-3.png"],
       "techStack": [
         "Ionic",
         "Angular"
