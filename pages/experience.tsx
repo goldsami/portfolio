@@ -33,7 +33,7 @@ export default function Experience({experience, skills}: ExperienceProps) {
                   </div>
                   <div className="block">
                     <span className="has-text-weight-semibold">Tech stack: &nbsp;</span>
-                    <span className="is-family-code">{x.techStack.join(', ')}</span>
+                    <span className="is-family-code">{x.techStack?.join(', ')}</span>
                   </div>
                 </div>
               </div>
@@ -41,14 +41,14 @@ export default function Experience({experience, skills}: ExperienceProps) {
           </div>
         </div>
         <div className="column is-half">
-          {skills.languages.map(x => (
+          {skills.languages?.map(x => (
             <div className="is-family-code mt-2" key={x.technologyName}>
               {x.technologyName}
               <progress className="progress is-small is-primary" value={x.rate} max="5"></progress>
             </div>
           ))}
           <br/>
-          {skills.frameworks.map(x => (
+          {skills.frameworks?.map(x => (
             <div className="is-family-code mt-2" key={x.technologyName}>
               {x.technologyName}
               <progress className="progress is-small is-info" value={x.rate} max="5"></progress>

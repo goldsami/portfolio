@@ -14,7 +14,7 @@ export default function Project({id, name, pictures, github, url, techStack, des
           <div className="is-6 subtitle">{description}</div>
           <div className="block">
             <span className="has-text-weight-semibold">Tech stack: &nbsp;</span>
-            <span className="is-family-code">{techStack.join(', ')}</span>
+            <span className="is-family-code">{techStack?.join(', ')}</span>
           </div>
           <div className="box">
             <div className="mb-2 is-family-code">
@@ -25,7 +25,7 @@ export default function Project({id, name, pictures, github, url, techStack, des
         </div>
         <div className="column is-two-thirds">
           <Carousel>
-            {pictures.map(p => (
+            {pictures?.map(p => (
               <div>
                 <img src={p} />
               </div>
@@ -44,7 +44,7 @@ interface StaticPath {
 export async function getStaticPaths() {
   const projects = DataService.projects()
 
-  const paths = projects.map(({id}) => ({params: {id}}))
+  const paths = projects?.map(({id}) => ({params: {id}}))
 
   return {paths, fallback: true}
 }

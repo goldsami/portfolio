@@ -14,7 +14,7 @@ export default function Home({aboutMyself: {about, name}, skills: {languages, fr
 
   const techIcons = useMemo(() => {
     const process = (items: SkillType[]) => {
-      return items.filter(x => x.rate > 3).map(x => getTechImage(x.technologyName)).filter(x => !!x)
+      return items.filter(x => x.rate > 3)?.map(x => getTechImage(x.technologyName)).filter(x => !!x)
     }
     return [
       ...process(languages),
@@ -55,7 +55,7 @@ export default function Home({aboutMyself: {about, name}, skills: {languages, fr
           <div className="block">
             <div className="title is-5">Main Skills</div>
             <div className="columns is-flex is-flex-wrap-wrap">
-              {techIcons.map(x => (
+              {techIcons?.map(x => (
                 !!x && <div className="m-3">
                   <Image src={x} height={60} width={60}></Image>
                 </div>
