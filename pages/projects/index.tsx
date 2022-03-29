@@ -13,7 +13,7 @@ export default function Projects({projects}: ProjectsProps) {
     <Layout>
       <div className="columns is-multiline">
         {projects.map(p => (
-          <div key={p.id} className="project-container column is-one-third-desktop is-half-tablet">
+          <div key={p.id} className="project-container column is-one-third-desktop is-half-tablet is-clickable">
             <Link href={`/projects/${p.id}`}>
               <div className="card">
                 <div className="card-image">

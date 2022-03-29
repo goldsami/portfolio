@@ -78,6 +78,8 @@ html {
 
   .card:hover {
     .card-image {
+      background-color: lightgray;
+
       img {
         transform: scale(1.2);
       }
