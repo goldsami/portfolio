@@ -2,6 +2,8 @@
   "name": "Max Zolotarenko",
   "about": "Hello, I'm full-stack developer based in Kyiv, Ukraine.",
   "position": "Full Stack Developer",
+  "photo": "/images/me.webp",
+  "cv": "/CV.txt",
   "projects": [
     {
       "id": "1",
@@ -61,9 +63,11 @@
     }
   ],
   "contacts": {
-    "telegram": "@goldsamuel",
-    "phone": "+38 095 121 57 70",
-    "linkedin": "https://www.linkedin.com/in/max-zolotarenko-82aa551b3/"
+    "telegram": "https://t.me/goldsamuel",
+    "linkedin": "https://www.linkedin.com/in/max-zolotarenko-82aa551b3/",
+    "github": "https://github.com/goldsami",
+    "email": "zolotarenkomax@gmail.com",
+    "djinni": "https://djinni.co/q/7dac7a60d3/"
   },
   "experience": [
     {

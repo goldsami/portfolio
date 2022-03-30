@@ -4,6 +4,7 @@ import {ProjectModel} from "../../types";
 import {DataService} from "../../services";
 import Image from "next/image";
 import {Carousel} from "react-responsive-carousel";
+import MyLink from "../../components/link";
 
 export default function Project({id, name, pictures, github, url, techStack, description}: ProjectModel) {
   return (
@@ -17,10 +18,8 @@ export default function Project({id, name, pictures, github, url, techStack, des
             <span className="is-family-code">{techStack?.join(', ')}</span>
           </div>
           <div className="box">
-            <div className="mb-2 is-family-code">
-              <a>Github</a>
-            </div>
-            <div className="mb-2 is-family-code"><a>Website</a></div>
+            {github && <MyLink url={github} title={'Github'} />}
+            {url && <MyLink url={url} title={'Website'} />}
           </div>
         </div>
         <div className="column is-two-thirds">

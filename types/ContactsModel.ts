@@ -1,5 +1,7 @@
 export interface ContactsModel {
   telegram: string
-  phone: string
+  email: string
   linkedin: string
+  github: string
+  djinni: string
 }

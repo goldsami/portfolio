@@ -16,6 +16,8 @@ export class DataService {
       name: data?.name,
       about: data?.about,
       position: data?.position,
+      photo: data?.photo,
+      cv: data?.cv
     }
   }
 

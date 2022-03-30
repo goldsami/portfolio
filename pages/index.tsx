@@ -1,16 +1,23 @@
 import Layout from "../components/layout"
 import {DataService, getTechImage} from "../services";
-import {UserModel} from "../types";
+import {ContactsModel, UserModel} from "../types";
 import Image from 'next/image';
 import {SkillsModel, SkillType} from "../types/SkillsModel";
 import {useMemo} from "react";
+import MyLink from "../components/link";
+import {capitalizeFirstLetter} from "../services/utils";
 
 interface HomeProps {
   aboutMyself: UserModel,
-  skills: SkillsModel
+  skills: SkillsModel,
+  contacts: ContactsModel,
 }
 
-export default function Home({aboutMyself: {about, name}, skills: {languages, frameworks}}: HomeProps) {
+export default function Home({
+                               aboutMyself: {about, name, photo, cv},
+                               skills: {languages, frameworks},
+                               contacts,
+                             }: HomeProps) {
 
   const techIcons = useMemo(() => {
     const process = (items: SkillType[]) => {
@@ -28,16 +35,16 @@ export default function Home({aboutMyself: {about, name}, skills: {languages, fr
         <div className="column is-one-third">
           <h3 className="title is-3 has-text-centered">{name}</h3>
           <div className="block image has-text-centered">
-            <Image className="is-rounded" src={'/images/me.webp'} height={150} width={150}>
+            <Image className="is-rounded" src={photo} height={150} width={150}>
             </Image>
           </div>
           <div className="box">
             <div className="title is-5">Links</div>
-            <div className="mb-2 is-family-code"><a>LinkedIn</a></div>
-            <div className="mb-2 is-family-code"><a>Telegram</a></div>
-            <div className="mb-2 is-family-code"><a>Email</a></div>
-            <div className="mb-2 is-family-code"><a>Djinni</a></div>
-            <div className="mb-2 is-family-code"><a>Github</a></div>
+            {Object.entries(contacts).map(([k, v]) => (
+              <div key={k}>
+                <MyLink title={capitalizeFirstLetter(k)} url={v} />
+              </div>
+            ))}
           </div>
         </div>
         <div className="column is-two-thirds">
@@ -49,7 +56,7 @@ export default function Home({aboutMyself: {about, name}, skills: {languages, fr
             <div className="title is-5">Job Opportunities</div>
             <article className="block">
               Now i'm looking for job on front-end developer position.<br/>
-              Here's my <a href="/resume.txt" download>CV</a>.
+              Here's my <a href={cv} download>CV</a>.
             </article>
           </div>
           <div className="block">
@@ -72,11 +79,13 @@ export default function Home({aboutMyself: {about, name}, skills: {languages, fr
 export async function getStaticProps() {
   const aboutMyself = DataService.me()
   const skills = DataService.skills()
+  const contacts = DataService.contacts()
 
   return {
     props: {
       aboutMyself,
-      skills
+      skills,
+      contacts,
     }
   }
 }
