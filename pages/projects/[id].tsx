@@ -24,8 +24,8 @@ export default function Project({id, name, pictures, github, url, techStack, des
         </div>
         <div className="column is-two-thirds">
           <Carousel>
-            {pictures?.map(p => (
-              <div>
+            {pictures?.map((p,index) => (
+              <div key={index}>
                 <img src={p} />
               </div>
             ))}

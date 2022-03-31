@@ -14,7 +14,7 @@ export const getTechImage = (techName: string) => {
     return '/images/tech/html.png'
   }
   if (name.startsWith('sass')) {
-    return '/images/tech/sass.png'
+    return '/images/tech/sass.webp'
   }
   if (name.startsWith('react')) {
     return '/images/tech/react.png'
