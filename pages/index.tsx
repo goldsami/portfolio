@@ -55,7 +55,7 @@ export default function Home({
           <div className="block">
             <div className="title is-5">Job Opportunities</div>
             <article className="block">
-              Now i'm looking for job on front-end developer position.<br/>
+              Now I'm looking for job on front-end developer position.<br/>
               Here's my <a href={cv} download>CV</a>.
             </article>
           </div>

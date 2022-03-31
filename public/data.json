@@ -1,6 +1,6 @@
 {
   "name": "Max Zolotarenko",
-  "about": "Hello, I'm full-stack developer based in Kyiv, Ukraine.",
+  "about": "Hello, I'm a full-stack developer based in Kyiv, Ukraine.",
   "position": "Full Stack Developer",
   "photo": "/images/me.webp",
   "cv": "/CV.txt",
@@ -91,7 +91,7 @@
   "experience": [
     {
       "startDate": "2019-10-01",
-      "endDate": "2021-03-01",
+      "endDate": "2021-02-01",
       "companyName": "Devmiles",
       "position": "Full Stack Developer",
       "techStack": [
@@ -105,7 +105,7 @@
       ]
     },
     {
-      "startDate": "2021-03-01",
+      "startDate": "2021-02-01",
       "endDate": "Present",
       "companyName": "ProtoQ",
       "position": "Full Stack Developer",

@@ -72,6 +72,8 @@ a.icon {
 }
 
 .main-container {
+  min-height: calc(100vh - #{$nav-height});
+
   main {
     width: 100%;
   }
