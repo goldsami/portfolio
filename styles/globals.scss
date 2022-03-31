@@ -20,6 +20,10 @@ html {
       color: whitesmoke !important;
     }
 
+    .card-image {
+      background-color: darkgrey;
+    }
+
     body {
       background-color: #232323;
       background-color: #424242;
@@ -68,8 +72,6 @@ a.icon {
 }
 
 .main-container {
-  height: calc(100vh - #{$nav-height});
-
   main {
     width: 100%;
   }
