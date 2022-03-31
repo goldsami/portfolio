@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 interface LinkProps {
   url: string
   title: string
@@ -5,6 +7,8 @@ interface LinkProps {
 
 export default function MyLink({url, title}: LinkProps) {
   return (
-    <div className="mb-2 is-family-code"><a href={url}>{title}</a></div>
+    <div className="mb-2 is-family-code">
+      <Link href={url}><a>{title}</a></Link>
+    </div>
   )
 }

@@ -2,11 +2,14 @@ import Link from 'next/link'
 import {useState} from "react";
 import {DataService} from "../services";
 import {useTheme} from "next-themes";
+import Icon from "./icon";
+import { Icons } from '../types/icons';
 
 export default function Navbar() {
   const [showDropdown, toggleDropdown] = useState(false)
 
-  const {name, position} = DataService.me()
+  const {name} = DataService.me()
+  const {github, linkedin, telegram} = DataService.contacts()
 
   const {theme, setTheme} = useTheme()
 
@@ -47,19 +50,13 @@ export default function Navbar() {
 
         <div className="navbar-end is-flex">
           <div className="navbar-item">
-            <span className="icon is-medium is-clickable">
-              <i className="fa fa-lg fa-github"></i>
-            </span>
+            <Icon icon={Icons.github} link={github} />
           </div>
           <div className="navbar-item">
-            <span className="icon is-medium is-clickable">
-              <i className="fa fa-lg fa-linkedin"></i>
-            </span>
+            <Icon icon={Icons.linkedin} link={linkedin} />
           </div>
           <div className="navbar-item">
-            <span className="icon is-medium is-clickable">
-              <i className="fa fa-lg fa-telegram"></i>
-            </span>
+            <Icon icon={Icons.telegram} link={telegram} />
           </div>
           {/*todo: add margin on desktop*/}
           <div className="navbar-item theme-toggle">

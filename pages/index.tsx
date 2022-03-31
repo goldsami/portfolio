@@ -62,13 +62,15 @@ export default function Home({
           <div className="block">
             <div className="title is-5">Main Skills</div>
             <div className="columns is-flex is-flex-wrap-wrap">
-              {techIcons?.map(x => (
-                !!x && <div className="m-3">
+              {techIcons?.map((x, index) => (
+                !!x && <div className="m-3" key={index}>
                   <Image src={x} height={60} width={60}></Image>
                 </div>
               ))}
             </div>
-            <div className="mb-2 is-family-code has-text-right"><a>More on skills</a></div>
+            <div className="has-text-right">
+              <MyLink title="More on skills" url="/experience" />
+            </div>
           </div>
         </div>
       </div>
