@@ -14,7 +14,7 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-fixed-top p-3" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <Link href="/">
           <a className="navbar-item is-flex is-flex-direction-column">
