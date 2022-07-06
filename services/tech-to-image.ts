@@ -25,6 +25,9 @@ export const getTechImage = (techName: string) => {
   if (name.startsWith('css')) {
     return '/images/tech/css.png'
   }
+  if (name.startsWith('nodejs')) {
+    return '/images/tech/nodejs.png'
+  }
 
   return null
 }
