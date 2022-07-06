@@ -1,11 +1,11 @@
 import Layout from "../components/layout"
-import {DataService, getTechImage} from "../services";
-import {ContactsModel, UserModel} from "../types";
+import { DataService, getTechImage } from "../services";
+import { ContactsModel, UserModel } from "../types";
 import Image from 'next/image';
-import {SkillsModel, SkillType} from "../types/SkillsModel";
-import {useMemo} from "react";
+import { SkillsModel, SkillType } from "../types/SkillsModel";
+import { useMemo } from "react";
 import MyLink from "../components/link";
-import {capitalizeFirstLetter} from "../services/utils";
+import { capitalizeFirstLetter } from "../services/utils";
 
 interface HomeProps {
   aboutMyself: UserModel,
@@ -14,10 +14,10 @@ interface HomeProps {
 }
 
 export default function Home({
-                               aboutMyself: {about, name, photo, cv},
-                               skills: {languages, frameworks},
-                               contacts,
-                             }: HomeProps) {
+  aboutMyself: { about, name, photo, cv },
+  skills: { languages, frameworks },
+  contacts,
+}: HomeProps) {
 
   const techIcons = useMemo(() => {
     const process = (items: SkillType[]) => {
@@ -33,9 +33,8 @@ export default function Home({
     <Layout>
       <div className="columns is-variable is-6">
         <div className="column is-one-third">
-          <h3 className="title is-3 has-text-centered">{name}</h3>
           <div className="block image has-text-centered">
-            <Image className="is-rounded" src={photo} height={150} width={150}>
+            <Image className="is-rounded" src={photo} height={250} width={250}>
             </Image>
           </div>
           <div className="box">
@@ -48,14 +47,16 @@ export default function Home({
           </div>
         </div>
         <div className="column is-two-thirds">
+          <h3 className="title is-3 is-hidden-mobile">{name}</h3>
           {/*todo: remove margin on mobile*/}
-          <article style={{marginTop: '60px'}} className="has-text-justified block">
+          <article className="has-text-justified block">
             {about}
           </article>
           <div className="block">
             <div className="title is-5">Job Opportunities</div>
             <article className="block">
-              Now I'm looking for job on front-end developer position.<br/>
+              {/* # TODO: move to data.json */}
+              Now I'm looking for job on front-end developer position.<br />
               Here's my <a href={cv} download>CV</a>.
             </article>
           </div>
@@ -63,8 +64,8 @@ export default function Home({
             <div className="title is-5">Main Skills</div>
             <div className="columns is-flex is-flex-wrap-wrap">
               {techIcons?.map((x, index) => (
-                !!x && <div className="m-3" key={index}>
-                  <Image src={x} height={60} width={60}></Image>
+                !!x && <div className="m-4" key={index}>
+                  <Image src={x} height={70} width={70}></Image>
                 </div>
               ))}
             </div>
