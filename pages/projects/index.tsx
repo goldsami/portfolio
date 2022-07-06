@@ -1,14 +1,14 @@
 import Layout from "../../components/layout"
-import {ProjectModel} from "../../types"
+import { ProjectModel } from "../../types"
 import Link from 'next/link'
-import {DataService} from "../../services";
+import { DataService } from "../../services";
 import Image from 'next/image'
 
 interface ProjectsProps {
   projects: ProjectModel[]
 }
 
-export default function Projects({projects}: ProjectsProps) {
+export default function Projects({ projects }: ProjectsProps) {
   return (
     <Layout>
       <div className="columns is-multiline">
@@ -19,8 +19,8 @@ export default function Projects({projects}: ProjectsProps) {
                 <div className="card-image">
                   <figure className="image is-5by3">
                     {!!p.pictures.length && <Image src={p.pictures[0]}
-                            layout='fill'
-                            objectFit='cover'/>}
+                      layout='fill'
+                      objectFit='cover' />}
                   </figure>
                   <div className="title is-4 px-3 py-1 mb-3 card-title has-text-light">
                     {p.name}

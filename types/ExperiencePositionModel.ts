@@ -1,5 +1,5 @@
 export interface ExperiencePositionModel {
-  startDate: string;
+  startDate: string
   endDate: string
   companyName: string
   position: string

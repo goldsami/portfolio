@@ -1,17 +1,17 @@
 import Link from 'next/link'
-import {useState} from "react";
-import {DataService} from "../services";
-import {useTheme} from "next-themes";
+import { useState } from "react";
+import { DataService } from "../services";
+import { useTheme } from "next-themes";
 import Icon from "./icon";
 import { Icons } from '../types/icons';
 
 export default function Navbar() {
   const [showDropdown, toggleDropdown] = useState(false)
 
-  const {name} = DataService.me()
-  const {github, linkedin, telegram} = DataService.contacts()
+  const { name } = DataService.me()
+  const { github, linkedin, telegram } = DataService.contacts()
 
-  const {theme, setTheme} = useTheme()
+  const { theme, setTheme } = useTheme()
 
   return (
     <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
@@ -24,8 +24,8 @@ export default function Navbar() {
         </Link>
 
         <a role="button" onClick={() => toggleDropdown(!showDropdown)}
-           className={`navbar-burger ${showDropdown && 'is-active'}`}
-           aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          className={`navbar-burger ${showDropdown && 'is-active'}`}
+          aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -61,9 +61,9 @@ export default function Navbar() {
           {/*todo: add margin on desktop*/}
           <div className="navbar-item theme-toggle">
             <span className="icon is-medium is-clickable"
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
               <i className={`fa fa-lg ${theme === 'dark' ? 'fa-sun-o' : 'fa-moon-o'}`}
-                 style={{color: 'orange'}}></i>
+                style={{ color: 'orange' }}></i>
             </span>
           </div>
         </div>

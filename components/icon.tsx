@@ -1,4 +1,4 @@
-import {Icons} from "../types/icons";
+import { Icons } from "../types/icons";
 import Link from 'next/link'
 
 interface IconProps {
@@ -6,7 +6,7 @@ interface IconProps {
   link: string
 }
 
-export default function Icon({icon, link}: IconProps) {
+export default function Icon({ icon, link }: IconProps) {
   return (
     <Link href={link}>
       <a className="icon is-medium is-clickable">

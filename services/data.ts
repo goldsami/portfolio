@@ -1,6 +1,6 @@
 import data from '../public/data.json'
-import {ContactsModel, ExperiencePositionModel, ProjectModel, UserModel} from "../types";
-import {SkillsModel} from "../types/SkillsModel";
+import { ContactsModel, ExperiencePositionModel, ProjectModel, UserModel } from "../types";
+import { SkillsModel } from "../types/SkillsModel";
 
 export class DataService {
   static projects(): ProjectModel[] {
@@ -27,13 +27,13 @@ export class DataService {
 
   static experience(): ExperiencePositionModel[] {
     // @ts-ignore
-    return data?.experience.sort((a,b) => new Date(b.startDate) - new Date(a.startDate))
+    return data?.experience.sort((a, b) => new Date(b.startDate) - new Date(a.startDate))
   }
 
   static skills(): SkillsModel {
     return {
-      languages: data?.skills.languages.sort((a,b) => b.rate - a.rate),
-      frameworks: data?.skills.frameworks.sort((a,b) => b.rate - a.rate),
+      languages: data?.skills.languages.sort((a, b) => b.rate - a.rate),
+      frameworks: data?.skills.frameworks.sort((a, b) => b.rate - a.rate),
     }
   }
 }

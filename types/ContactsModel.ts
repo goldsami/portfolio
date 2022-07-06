@@ -1,4 +1,3 @@
-// TODO: add skype
 export interface ContactsModel {
   telegram: string
   email: string

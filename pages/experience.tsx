@@ -1,7 +1,7 @@
 import Layout from "../components/layout";
-import {DataService} from "../services";
-import {ExperiencePositionModel} from "../types";
-import {SkillsModel} from "../types/SkillsModel";
+import { DataService } from "../services";
+import { ExperiencePositionModel } from "../types";
+import { SkillsModel } from "../types/SkillsModel";
 import dateFormat from "dateformat";
 
 interface ExperienceProps {
@@ -9,7 +9,7 @@ interface ExperienceProps {
   skills: SkillsModel
 }
 
-export default function Experience({experience, skills}: ExperienceProps) {
+export default function Experience({ experience, skills }: ExperienceProps) {
   function format(date: string) {
     if (date === 'Present') return date
 
@@ -47,7 +47,7 @@ export default function Experience({experience, skills}: ExperienceProps) {
               <progress className="progress is-small is-primary" value={x.rate} max="5"></progress>
             </div>
           ))}
-          <br/>
+          <br />
           {skills.frameworks?.map(x => (
             <div className="is-family-code mt-2" key={x.technologyName}>
               {x.technologyName}

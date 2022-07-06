@@ -1,15 +1,13 @@
-import Icon from "./icon";
-import {Icons} from "../types/icons";
-import {DataService} from "../services";
+import { DataService } from "../services";
 
 export default function Footer() {
-  const {name} = DataService.me()
+  const { name } = DataService.me()
 
   return (
     <footer className="footer pb-6">
       <div className="content columns is-mobile">
         <div className="column is-half">
-          Developed by <b style={{whiteSpace: 'nowrap'}}>{name}</b>
+          Developed by <b style={{ whiteSpace: 'nowrap' }}>{name}</b>
         </div>
       </div>
     </footer>

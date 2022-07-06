@@ -1,12 +1,10 @@
 import Layout from "../../components/layout";
-import {useRouter} from "next/router";
-import {ProjectModel} from "../../types";
-import {DataService} from "../../services";
-import Image from "next/image";
-import {Carousel} from "react-responsive-carousel";
+import { ProjectModel } from "../../types";
+import { DataService } from "../../services";
+import { Carousel } from "react-responsive-carousel";
 import MyLink from "../../components/link";
 
-export default function Project({id, name, pictures, github, url, techStack, description}: ProjectModel) {
+export default function Project({ id, name, pictures, github, url, techStack, description }: ProjectModel) {
   return (
     <Layout>
       <div className="columns m-0">
@@ -24,7 +22,7 @@ export default function Project({id, name, pictures, github, url, techStack, des
         </div>
         <div className="column is-two-thirds">
           <Carousel>
-            {pictures?.map((p,index) => (
+            {pictures?.map((p, index) => (
               <div key={index}>
                 <img src={p} />
               </div>
@@ -43,12 +41,12 @@ interface StaticPath {
 export async function getStaticPaths() {
   const projects = DataService.projects()
 
-  const paths = projects?.map(({id}) => ({params: {id}}))
+  const paths = projects?.map(({ id }) => ({ params: { id } }))
 
-  return {paths, fallback: true}
+  return { paths, fallback: true }
 }
 
-export async function getStaticProps({params: {id}}: StaticPath) {
+export async function getStaticProps({ params: { id } }: StaticPath) {
   const project = DataService.project(id)
 
   return {
