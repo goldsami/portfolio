@@ -1,6 +1,6 @@
 # Portfolio
 
-## Getting Started
+My portfolio website. You can find it on [this url](https://portfolio-goldsami.vercel.app/).
 
 First install the dependencies:
 
