@@ -79,6 +79,18 @@
         "Ionic",
         "Angular"
       ]
+    },
+    {
+      "id": "6",
+      "name": "Mines game",
+      "github": "https://github.com/goldsami/mines",
+      "description": "CLI Mines game written on Elixir",
+      "pictures": [
+        "/images/projects/mines/1.png"
+      ],
+      "techStack": [
+        "Elixir"
+      ]
     }
   ],
   "contacts": {
@@ -113,11 +125,16 @@
       "techStack": [
         "Angular",
         "TS",
+        "JS",
+        "Node.js",
         "Express",
-        "Graphql",
+        "GraphQL",
         "React",
         "Pug",
-        "Cypress"
+        "Cypress",
+        "MySql",
+        "Gatsby",
+        "Python"
       ]
     },
     {
@@ -129,7 +146,8 @@
         "C#",
         "C++",
         "C",
-        "JS"
+        "JS",
+        "SQL"
       ]
     }
   ],
@@ -161,7 +179,7 @@
       },
       {
         "technologyName": "Go",
-        "rate": 2
+        "rate": 1
       },
       {
         "technologyName": "C#",
@@ -169,11 +187,11 @@
       },
       {
         "technologyName": "Elixir",
-        "rate": 1
+        "rate": 4
       },
       {
         "technologyName": "SQL",
-        "rate": 3
+        "rate": 4
       }
     ],
     "frameworks": [
