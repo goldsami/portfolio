@@ -34,8 +34,7 @@ export default function Home({
       <div className="columns is-variable is-6">
         <div className="column is-one-third">
           <div className="block image has-text-centered">
-            <Image className="is-rounded" src={photo} height={250} width={250}>
-            </Image>
+            <Image className="is-rounded" src={photo} height={250} width={250} />
           </div>
           <div className="box">
             <div className="title is-5">Links</div>
@@ -48,7 +47,6 @@ export default function Home({
         </div>
         <div className="column is-two-thirds">
           <h3 className="title is-3 is-hidden-mobile">{name}</h3>
-          {/*todo: remove margin on mobile*/}
           <article className="has-text-justified block">
             {about}
           </article>
@@ -56,7 +54,10 @@ export default function Home({
             <div className="title is-5">Job Opportunities</div>
             <article className="block">
               {/* # TODO: move to data.json */}
-              Now I'm looking for job on front-end developer position.<br />
+              Now I'm looking for job on front-end developer position.
+              <br/>
+              My main stack is <code>Angular</code> + <code>Node.js</code> but I'm ready to work with something else.
+              <br/><br/>
               Here's my <a href={cv} download>CV</a>.
             </article>
           </div>
@@ -65,7 +66,7 @@ export default function Home({
             <div className="columns is-flex is-flex-wrap-wrap">
               {techIcons?.map((x, index) => (
                 !!x && <div className="m-4" key={index}>
-                  <Image src={x} height={70} width={70}></Image>
+                  <Image src={x} height={70} width={70} />
                 </div>
               ))}
             </div>
