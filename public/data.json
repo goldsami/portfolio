@@ -12,9 +12,9 @@
       "url": "https://goldsami-kanban-board.netlify.app",
       "description": "Tool for tasks and projects management.",
       "pictures": [
-        "/images/kanban-1.png",
-        "/images/kanban-2.png",
-        "/images/kanban-3.png"
+        "/images/projects/kanban/1.png",
+        "/images/projects/kanban/2.png",
+        "/images/projects/kanban/3.png"
       ],
       "techStack": [
         "GraphQL",
@@ -31,8 +31,8 @@
       "github": "https://github.com/goldsami/snake",
       "url": "https://snake-bice.vercel.app",
       "pictures": [
-        "/images/snake-1.png",
-        "/images/snake-2.png"
+        "/images/projects/snake/1.png",
+        "/images/projects/snake/2.png"
       ],
       "techStack": [
         "Vue"
@@ -45,11 +45,11 @@
       "url": "https://portfolio-goldsami.vercel.app/",
       "description": "My portfolio web site",
       "pictures": [
-        "/images/portfolio-1.png",
-        "/images/portfolio-2.png",
-        "/images/portfolio-3.png",
-        "/images/portfolio-4.png",
-        "/images/portfolio-5.png"
+        "/images/projects/portfolio/1.png",
+        "/images/projects/portfolio/2.png",
+        "/images/projects/portfolio/3.png",
+        "/images/projects/portfolio/4.png",
+        "/images/projects/portfolio/5.png"
       ],
       "techStack": [
         "NextJS"
@@ -60,7 +60,7 @@
       "name": "Conway's Game of Life",
       "github": "https://github.com/goldsami/game-of-life",
       "pictures": [
-        "/images/game-of-life-1.png"
+        "/images/projects/game-of-life/1.png"
       ],
       "techStack": [
         "Go"
@@ -71,9 +71,9 @@
       "name": "Reddit Client",
       "github": "https://github.com/goldsami/RedditClientRepository",
       "pictures": [
-        "/images/reddit-client-1.png",
-        "/images/reddit-client-2.png",
-        "/images/reddit-client-3.png"
+        "/images/projects/reddit-client/1.png",
+        "/images/projects/reddit-client/2.png",
+        "/images/projects/reddit-client/3.png"
       ],
       "techStack": [
         "Ionic",
