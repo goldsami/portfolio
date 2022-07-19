@@ -58,7 +58,7 @@ export default function Home({
               <br/>
               My main stack is <code>Angular</code> + <code>Node.js</code> but I'm ready to work with something else.
               <br/><br/>
-              Here's my <a href={cv} download>CV</a>.
+              Here's my <a href={cv}>CV</a>.
             </article>
           </div>
           <div className="block">
